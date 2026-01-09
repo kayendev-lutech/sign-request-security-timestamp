@@ -63,7 +63,6 @@ function generateApiSignature(
     nonce,
     timestamp,
     sign,
-    queryParamsWithSign: { ...allParams, sign },
   };
 }
 
@@ -82,7 +81,6 @@ console.log("GET result:", {
   sign: getResult.sign,
   nonce: getResult.nonce,
   timestamp: getResult.timestamp,
-  query: getResult.queryParamsWithSign,
 });
 
 // Example POST with JSON body
@@ -100,5 +98,4 @@ console.log("POST result:", {
   sign: postResult.sign,
   nonce: postResult.nonce,
   timestamp: postResult.timestamp,
-  query: postResult.queryParamsWithSign,
 });
